@@ -1,5 +1,7 @@
 #first menu of app
+from dataclasses import asdict
 from datetime import datetime
+
 
 now= datetime.now().strftime("%d/%m/%Y")
 
@@ -8,6 +10,9 @@ while(True):
     first_action =input().lower()
     print(first_action)
     if (first_action == "create" or first_action == "login"):
+        
         break
-    #if first_action == create:
+    print("Sorry, try it again !!")
+    #if first_action =login
+    # = create:
 
