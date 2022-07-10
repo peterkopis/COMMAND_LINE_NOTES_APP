@@ -15,9 +15,10 @@ class Actions:
       user_values = (created_user.reg_time,created_user.u_name,created_user.mail,created_user.psswrd)
       connect_db = connection.Connection()
       sql = "INSERT INTO users(reg_time,u_name,mail,psswrd) VALUES (?,?,?,?)"
-      print(connect_db)
+      #print(connect_db)
       #connect_db.execute(sql,created_user.reg_time,created_user.u_name,created_user.mail,created_user.psswrd)
-      connect_db.write_in(sql,user_values)
+      connect_db.write_account_in(sql,user_values)
+      print(f"\nThanks for creating of account {created_user.u_name}, now you can login !!!\n")
 
       """
       

@@ -6,7 +6,7 @@ class Connection:
         self.connection = sqlite3.connect('note_project.sqlite') 
         self.cursor = self.connection.cursor()
 
-    def write_in(self,sql,values):
+    def write_account_in(self,sql,values):
         self.cursor.execute(sql,values)
         self.connection.commit()
         self.connection.close()
