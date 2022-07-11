@@ -7,7 +7,9 @@ class Actions:
    
    
    def create_acount(self):
+          
       
+         
       u_name = input("\nWrite please your Name\n")
       mail = input("\n your mail\n")
       psswrd = input("\nand your password!\n")
@@ -18,11 +20,6 @@ class Actions:
       #print(connect_db)
       #connect_db.execute(sql,created_user.reg_time,created_user.u_name,created_user.mail,created_user.psswrd)
       connect_db.write_account_in(sql,user_values)
-      print(f"\nThanks for creating of account {created_user.u_name}, now you can login !!!\n")
-
-      """
+      
       
 
-      conec =Conexion()
-      conec.execute(sql, datetime.now(),User.u_name,User.mail,User.psswrd)
-      """
