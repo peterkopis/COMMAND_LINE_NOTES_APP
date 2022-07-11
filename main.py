@@ -18,4 +18,7 @@ while(True):
 
     if first_action == "create":
             do_it.create_acount()
+
+    elif first_action =="login":
+            do_it.verify_acount()
     

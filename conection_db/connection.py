@@ -14,7 +14,16 @@ class Connection:
             print(f"\nThanks for creating of account {values[1]}, now you can login !!!\n")
         except:
             print("Sorry anything is wrong, try it again")
-        
+
+    def verify_user_login(self,sql,values):
+        try:
+            self.cursor.execute(sql,values)
+            result =self.cursor.fetchone()
+            self.connection.close()
+            print(f"\n Welcome {result[2]}, your login is succesfully !!\n")
+            return result
+        except:
+            print("Sorry login is incorrect , try it again")
 """
 cursor.execute('''CREATE TABLE IF NOT EXISTS users 
 ( id INTEGER PRIMARY KEY AUTOINCREMENT,
