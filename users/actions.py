@@ -27,4 +27,35 @@ class Actions:
       user_values = (mail,psswrd)
       connect_db = connection.Connection()
       sql = "SELECT * from users WHERE mail = ? AND psswrd = ?"
-      connect_db.verify_user_login(sql,user_values)
+      result = connect_db.verify_user_login(sql,user_values)
+      #print(result)
+      self.user_action_in_account(result)
+
+   
+   def user_action_in_account(self,logining_user):
+      logining_user = logining_user
+          
+      print("""
+      Hi, you can do:\n\n
+      \t-create note (create)\n
+      \t-read your notes (read)\n
+      \t-delete note (delet)\n
+      \t-exit of app (exit)\n
+      """)
+      actions_in_account = input("What want you to do??")
+      if actions_in_account == "create":
+         print("Create your note!")
+         self.user_action_in_account(logining_user)
+      elif actions_in_account == "read":
+         print("Here are your notes!")
+         self.user_action_in_account(logining_user)
+      elif actions_in_account == "delete":
+         print("Delete your note!")
+         self.user_action_in_account(logining_user)
+      elif actions_in_account == "exit":
+         print("Thanks for using the app, Good bye!")
+         exit()
+      else:
+         print("I dont understand, please try it again")
+         
+         
