@@ -30,4 +30,7 @@ class Action_notes():
         sql = "SELECT * FROM notes WHERE user_id = ?"
         id_user = (self.user_id,)
         result = self.connect_db.verify_user_login(sql,id_user,False)
+
+    def close_the_db(self):
+        self.connect_db.connection.close()
         

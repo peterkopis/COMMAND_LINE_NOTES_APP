@@ -10,7 +10,7 @@ class Connection:
         try:
             self.cursor.execute(sql,values)
             self.connection.commit()
-            #self.connection.close()
+            
             
         except:
             print("Sorry anything is wrong, try it again")

@@ -62,6 +62,7 @@ class Actions:
             actions_for_notes.delete_note()
            
          elif actions_in_account == "exit":
+            actions_for_notes.close_the_db()
             print("Thanks for using the app, Good bye!")
             exit()
          else:
