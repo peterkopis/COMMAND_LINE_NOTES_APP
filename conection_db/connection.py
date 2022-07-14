@@ -11,14 +11,18 @@ class Connection:
             self.cursor.execute(sql,values)
             self.connection.commit()
             self.connection.close()
-            print(f"\nThanks for creating of account {values[1]}, now you can login !!!\n")
+            
         except:
             print("Sorry anything is wrong, try it again")
+            
 
-    def verify_user_login(self,sql,values):
+    def verify_user_login(self,sql,values,user_verify):
         try:
             self.cursor.execute(sql,values)
-            result =self.cursor.fetchone()
+            if user_verify:
+                result =self.cursor.fetchone()
+            else:
+                result = self.cursor.fetchall()
             self.connection.close()
             print(f"\n Welcome {result[2]}, your login is succesfully !!\n")
             return result
