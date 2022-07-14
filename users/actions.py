@@ -28,10 +28,8 @@ class Actions:
       mail = input("\n Write please your mail in\n")
       psswrd = input("\n Now for login write your  password!\n")
       user_values = (mail,psswrd)
-      #connect_db = connection.Connection()
       sql = "SELECT * from users WHERE mail = ? AND psswrd = ?"
       result = self.connect_db.verify_user_login(sql,user_values,True)
-      #print(result)
       self.user_action_in_account(result)
 
    
@@ -56,6 +54,8 @@ class Actions:
          
          elif actions_in_account == "read":
             print("Here are your notes!")
+            actions_for_notes.read_the_notes()
+            
             
          elif actions_in_account == "delete":
             print("Delete your note!")
