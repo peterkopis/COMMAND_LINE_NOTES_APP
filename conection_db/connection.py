@@ -32,26 +32,3 @@ class Connection:
             return result
         except:
             print("Sorry login is incorrect , try it again")
-"""
-cursor.execute('''CREATE TABLE IF NOT EXISTS users 
-( id INTEGER PRIMARY KEY AUTOINCREMENT,
-  reg_time DATE,
-  u_name VARCHAR(355),
-  mail VARCHAR(355) NOT NULL UNIQUE,
-  psswrd VARCHAR(355) NOT NULL)''')
-  
-#cursor.execute("INSERT INTO users(u_name,mail,psswrd) VALUES ('EBOK','Edi@ebok.cz','edi2')")
-cursor.execute('''CREATE TABLE IF NOT EXISTS notes
-(id INTEGER PRIMARY KEY AUTOINCREMENT,
- create_at DATE,
- name_the_note VARCHAR(355),
- content_note TEXT,
- user_id INTEGER,
- CONSTRAINT fk_user_id FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE) ''')
-
-#cursor.execute("INSERT INTO notes(name_the_note,user_id) VALUES ('Huhu',1) ")
-#cursor.execute("DELETE FROM users ")
-
-connection.commit()
-connection.close()
-"""
