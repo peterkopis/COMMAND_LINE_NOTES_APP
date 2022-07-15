@@ -1,4 +1,3 @@
-
 from datetime import datetime
 from conection_db import connection 
 from notes import actions_notes
@@ -13,7 +12,7 @@ class Actions:
       u_name = input("\nWrite please your Name\n")
       mail = input("\n your mail\n")
       psswrd = input("\nand your password!\n")
-      user_values = (datetime.now(),u_name,mail,psswrd) #(created_user.reg_time,created_user.u_name,created_user.mail,created_user.psswrd)
+      user_values = (datetime.now(),u_name,mail,psswrd) 
       sql = "INSERT INTO users(reg_time,u_name,mail,psswrd) VALUES (?,?,?,?)"
       
       self.connect_db.write_in_or_delete_from_db(sql,user_values)
