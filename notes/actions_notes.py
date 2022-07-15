@@ -24,7 +24,10 @@ class Action_notes():
         sql = "DELETE FROM notes WHERE (name_the_note LIKE ?) AND (user_id = ?)"
         deleting_values = (name_of_note_for_deleting,self.user_id)
         self.connect_db.write_account_in(sql,deleting_values)
-        print("Your note is deleted !")
+        if self.connect_db.cursor.rowcount >=1:
+            print("Your note is deleted !")
+        else:
+            print("Sorry this note not exist!")
 
     def read_the_notes(self):
         sql = "SELECT * FROM notes WHERE user_id = ?"

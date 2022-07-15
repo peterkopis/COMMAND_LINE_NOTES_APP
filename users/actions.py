@@ -20,7 +20,8 @@ class Actions:
       #print(connect_db)
       #connect_db.execute(sql,created_user.reg_time,created_user.u_name,created_user.mail,created_user.psswrd)
       self.connect_db.write_account_in(sql,user_values)
-      print(f"\nThanks for creating of account {user_values[1]}, now you can login !!!\n")
+      if self.connect_db.cursor ==1:
+         print(f"\nThanks for creating of account {user_values[1]}, now you can login !!!\n")
       
 
    def verify_acount(self):

@@ -11,7 +11,7 @@ while(True):
     while(True):
         print(f"""\nWelcome in notes app, today is {now} \n\n 
         -you can create an acount (create)\n \n\t-login in your existing acount (login)\n
-        -exit of app\n""")
+        -exit of app (exit)\n""")
         first_action =input().lower()
         if (first_action == "create" or first_action == "login" or first_action == "exit"):
             break

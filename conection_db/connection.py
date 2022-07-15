@@ -12,6 +12,7 @@ class Connection:
             self.connection.commit()
             
             
+            
         except:
             print("Sorry anything is wrong, try it again")
             
