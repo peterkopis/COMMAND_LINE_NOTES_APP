@@ -1,4 +1,4 @@
-from users import user
+
 from datetime import datetime
 from conection_db import connection 
 from notes import actions_notes
